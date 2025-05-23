@@ -1,1 +1,421 @@
+<html>
+ <head>  
+ </head> 
+ <body> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>$LEEN192 – Onore Chef Leen</title> 
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      padding-bottom: 300px; /* Fè pati anba vizib */
+    }
 
+    video#bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -2;
+      object-fit: cover;
+    }
+
+    audio {
+      display: none;
+    }
+
+    header h1 {
+      margin: 0;
+      padding: 20px;
+      font-size: 2.5rem;
+      color: #FFD700;
+    }
+
+    header p {
+      font-style: italic;
+      color: #ccc;
+    }
+
+    #hero h2 {
+      font-size: 1.5rem;
+      margin: 20px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn.whitepaper {
+      background-color: #444;
+    }
+
+    .btn.whitepaper:hover {
+      background-color: #666;
+    }
+
+    .btn.telegram {
+      background-color: #0088cc;
+    }
+
+    .btn.telegram:hover {
+      background-color: #006699;
+    }
+
+    .btn.twitter {
+      background-color: #1DA1F2;
+    }
+
+    .btn.twitter:hover {
+      background-color: #0d8ddf;
+    }
+
+    .btn.copy {
+      background-color: #FFD700;
+      color: black;
+    }
+
+    .btn.copy:hover {
+      background-color: #e6c200;
+    }
+
+    .contract-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    #contractAddress {
+      padding: 10px;
+      width: 300px;
+      text-align: center;
+      border: 1px solid #FFD700;
+      border-radius: 6px;
+      background-color: #111;
+      color: white;
+    }
+
+    canvas#fireworks {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 5;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      background-color: #111;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #FFD700;
+      width: 90%;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      border-radius: 10px;
+      color: white;
+      position: relative;
+    }
+
+    .close {
+      color: #FFD700;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+      color: #FFD700;
+    }
+  </style> 
+  <video autoplay muted loop id="bg-video"> 
+   <source src="https://cdn.pixabay.com/vimeo/770276485/food-127642.mp4?width=1280&amp;hash=55b99298cb15e8d56ce0cc36d28144c7f782b7df" type="video/mp4"> 
+  </video> 
+  <audio autoplay loop> 
+   <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0c2ec0d14.mp3" type="audio/mp3"> 
+  </audio> 
+  <script>
+  const leenMusic = document.getElementById("leenMusic");
+  const musicBtn = document.getElementById("musicBtn");
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", function () {
+    if (isPlaying) {
+      leenMusic.pause();
+      musicBtn.innerHTML = "▶️ Jwe Mizik Leen";
+    } else {
+      leenMusic.play();
+      musicBtn.innerHTML = "⏸️ Pauze Mizik Leen";
+    }
+    isPlaying = !isPlaying;
+  });
+</script> 
+  <script>
+  const leenMusic = document.getElementById("leenMusic");
+  const musicBtn = document.getElementById("musicBtn");
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", function () {
+    if (isPlaying) {
+      leenMusic.pause();
+      musicBtn.innerHTML = "▶️ Jwe Mizik Leen";
+    } else {
+      leenMusic.play();
+      musicBtn.innerHTML = "⏸️ Pauze Mizik Leen";
+    }
+    isPlaying = !isPlaying;
+  });
+</script> 
+  <script>
+  const leenMusic = document.getElementById("leenMusic");
+
+  // Sispann mizik lè moun kite paj la
+  window.addEventListener("beforeunload", function () {
+    leenMusic.pause();
+  });
+</script> 
+  <script>
+    // Enable audio autoplay
+    window.addEventListener('click', function() {
+      document.getElementById('bgMusic').play();
+    });
+  </script> 
+  <header> 
+   <h1>LEEN192 ($LEEN)</h1> 
+   <p>“Cooked for 192 Hours. Minted for Eternity.”</p> 
+  </header> 
+  <img src="https://i.postimg.cc/sx2M5KsJ/IMG-2145.jpg"> 
+  <section id="hero"> 
+   <h2>Introducing $LEEN — A Memecoin Born from Legacy and Pride</h2> 
+   <div class="button-group"> 
+    <button class="btn whitepaper" onclick="openWhitepaper()"> <img src="https://img.icons8.com/ios-filled/ffffff/document.png"> Whitepaper </button> 
+    <a class="btn telegram" href="https://t.me/leen192" target="_blank"> <img src="https://img.icons8.com/ios-filled/ffffff/telegram-app.png"> Telegram </a> 
+    <a class="btn twitter" href="https://twitter.com/leen192" target="_blank"> <img src="https://img.icons8.com/ios-filled/ffffff/twitter.png"> Twitter </a> 
+   </div> 
+  </section> 
+  <section id="contract"> 
+   <h3>Contract Address</h3> 
+   <div class="contract-box"> 
+    <input type="text" id="contractAddress" value="COMING SOON" readonly> 
+    <button onclick="copyContract()" class="btn copy"> <img src="https://img.icons8.com/ios-glyphs/ffffff/copy.png"> Copy </button> 
+   </div> 
+  </section> 
+  <div id="whitepaperModal" class="modal"> 
+   <div class="modal-content"> 
+    <span class="close" onclick="closeWhitepaper()">×</span> 
+    <h3>($LEEN)</h3> 
+    <h2>WHITEPAPER — LEEN192</h2> 
+    <h3>A Tribute to a Culinary Hero</h3> 
+    <p> LEEN192 is a special memecoin created to honor an extraordinary woman: Chef Leen, the first Haitian chef to achieve a global feat in France. She cooked for 192 hours non-stop — a historic record that put Haiti on the world map in the culinary space. </p> 
+    <p>This is no small feat. It’s pride. It’s history. It’s the reason we launched this project. </p> 
+    <p>• Unite a community that values and supports the achievements of Haitian women and children.</p> 
+    <h3>The Purpose of LEEN192 ($LEEN)</h3> 
+    <p>• Honor Chef Leen’s exceptional achievement as the first Haitian woman to accomplish this.</p> 
+    <p>• Build a monument (physical or digital) in honor of Chef Leen that will stand as a mark in history.</p> 
+    <p>• Create a memecoin that brings value, inspiration, and pride to all Haitians and the Caribbean family.</p> 
+    <h3>Why is LEEN192 ($LEEN) important?</h3> 
+    <p>It’s not every day you hear about someone from our country raising Haiti’s name on the global stage. Chef Leen did it with her passion and love for cooking. And today, we’re taking that fight further — putting it on the blockchain, so her achievement can live forever.</p> 
+    <h3>The Project Plan</h3> 
+    <h2>We plan to:</h2> 
+    <p> • Launch marketing campaigns across all social media to spotlight Chef Leen.</p> 
+    <p> • Develop collectible NFTs to commemorate the moment.</p> 
+    <p> • Collaborate with artists to build an honorary monument.</p> 
+    <p>• Create a strong, honest, and transparent community.</p> 
+    <p> • Make the world hear about LEEN192 ($LEEN)— a symbol of pride, honor, and accomplishment.</p> 
+    <h3>How Can You Participate?</h3> 
+    <p> • Buy LEEN192 ($LEEN)on the Solana platform.</p> 
+    <p>• Share Chef Leen’s story on social media.</p> 
+    <p> • Join our community on Telegram, X (Twitter), and other platforms.</p> 
+    <p>• Support the movement so we can turn the honorary monument into a reality. ⸻</p> 
+    <h3>A Final Word</h3> 
+    <p>LEEN192 is more than just a memecoin. It’s love. It’s honor. It’s respect for a woman who ignited courage, passion, and pride for all Haitians.</p> 
+    <p>We invite you to be part of this story. Honor Leen. Honor Haiti. Support LEEN192.</p> 
+   </div> 
+  </div> 
+  <h2>LEEN192</h2> 
+  <p>$LEEN is not just another memecoin. It’s a digital monument created to honor Chef Leen, the first Haitian woman to achieve a world record by cooking non-stop for 192 hours in France. This historic moment didn’t just make headlines — it made history.</p> 
+  <img src="https://i.postimg.cc/9FCJYK2Q/photo-output.jpg"> 
+  <h2>LEEN192</h2> 
+  <p>$LEEN symbolizes strength, culture, and perseverance. It’s a token of inspiration for every Haitian and everyone who believes in turning passion into power. By holding $LEEN, you’re not just part of a community — you’re part of a movement.</p> 
+  <h4>This is more than crypto. This is heritage on the blockchain. This is $LEEN. </h4> 
+  <img src="https://i.postimg.cc/MTCYZczX/f1ca960a-8d03-4d60-8d86-c61457f7e0d0.jpg"> 
+  <h3>CONGRATULATIONS, CHEF LEEN!</h3> 
+  <p>Chef Leen, you have proudly placed </p> 
+  <h4>Haiti</h4> 
+  <p>on the world map! With courage, passion, and determination, you accomplished something extraordinary: 192 hours of non-stop cooking in the heart of France. This is not just a record — it’s a legacy,an inspiration,and a historic milestone. You’ve shown generations that nothing is impossible for a Haitian woman who believes in herself. You didn’t just cook food — you cooked hope, pride, and love for your people</p> 
+  <script>
+  // Jwe mizik apre premye klik
+  window.addEventListener('click', function() {
+    const bgMusic = document.getElementById('bgMusic');
+    if (bgMusic.paused) {
+      bgMusic.play();
+    }
+  });
+</script> 
+  <img src="https://i.postimg.cc/HsSZy947/9e98ca25-b601-4d1c-83ad-5899180d79fc.jpg"> 
+  <h2>LEEN192</h2> 
+  <p>was created to honor you, celebrate your journey, and immortalize your achievement on the blockchain forever. We are proud of you. We salute you. Bravo, CHEF LEEN!</p> 
+  <img src="https://i.postimg.cc/TP6v2JSs/photo-output.jpg"> 
+  <canvas id="fireworks"></canvas> 
+  <script>
+    function copyContract() {
+      const input = document.getElementById("contractAddress");
+      input.select();
+      input.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Copy Close!");
+    }
+
+    function openWhitepaper() {
+      document.getElementById("whitepaperModal").style.display = "block";
+    }
+
+    function closeWhitepaper() {
+      document.getElementById("whitepaperModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("whitepaperModal");
+      if (event.target === modal) {
+        closeWhitepaper();
+      }
+    }
+
+    const canvas = document.getElementById('fireworks');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    
+    function createParticles(x, y, hue) {
+      const particleCount = 100;
+      for (let i = 0; i < particleCount; i++) {
+        const speed = Math.random() * 6 + 2;
+        const angle = Math.random() * Math.PI * 2;
+        particles.push({
+          x,
+          y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          hue,
+          alpha: 1,
+          radius: Math.random() * 2 + 1
+        });
+      }
+    }
+
+    function drawFireworks() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.05; // gravity
+        p.alpha -= 0.01;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `hsla(${p.hue}, 100%, 50%, ${p.alpha})`;
+        ctx.fill();
+
+        if (p.alpha <= 0) {
+          particles.splice(i, 1);
+        }
+      }
+
+      if (Math.random() < 0.1) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * (canvas.height / 2);
+        const hue = Math.floor(Math.random() * 360);
+        createParticles(x, y, hue);
+      }
+    }
+
+    function animate() {
+      drawFireworks();
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script> 
+  <meta charset="UTF-8"> 
+  <title>$LEEN192</title> 
+  <style>
+    /* Ou ka mete stil bouton isit si ou vle */
+  </style> 
+  <!-- Lòt kontni sit ou la --> 
+  <!-- Bouton mizik + odyo --> 
+  <audio id="leenMusic" loop> 
+   <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Broke_For_Free/Petals/Broke_For_Free_-_Night_Owl.mp3" type="audio/mp3"> Navigatè ou pa sipòte mizik anliy. 
+  </audio> 
+  <button id="musicBtn" style="padding: 10px 20px; background-color: gold; color: black; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;"> ▶️ Jwe Mizik Leen </button> 
+  <!-- Script lan dwe ALAFIN nan body a --> 
+  <script>
+    const leenMusic = document.getElementById("leenMusic");
+    const musicBtn = document.getElementById("musicBtn");
+    let isPlaying = false;
+
+    musicBtn.addEventListener("click", function () {
+      if (isPlaying) {
+        leenMusic.pause();
+        musicBtn.innerHTML = "▶️ Jwe Mizik Leen";
+      } else {
+        leenMusic.play();
+        musicBtn.innerHTML = "⏸️ Pauze Mizik Leen";
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>   
+ </body>
+</html>
